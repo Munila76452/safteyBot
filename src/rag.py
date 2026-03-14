@@ -2,7 +2,7 @@ import os
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import Chroma
 from langchain_openai import AzureOpenAIEmbeddings
 
 def load_txt_documents(folder):
@@ -41,8 +41,7 @@ def build_vector_db():
         api_version="2024-12-01-preview"
     )
 
-    db = FAISS.from_documents(chunks, embeddings)
-
+    db = Chroma.from_documents(chunks, embeddings)
     return db
 
 def retrieve_context(db, question):
