@@ -1,0 +1,39 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.envrc
+
+# Environment variables
+.env
+
+# MacOS system files
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# VSCode settings (optional)
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# FAISS vector index (if you save later)
+*.faiss
+*.pkl
+
+.env
