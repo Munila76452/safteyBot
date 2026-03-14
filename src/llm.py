@@ -1,10 +1,11 @@
-
-
 import os
 from openai import AzureOpenAI
 
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-subscription_key = os.getenv("AZURE_OPENAI_KEY")
+subscription_key = os.getenv("AZURE_OPENAI_API_KEY")
+
+# add this line
+deployment = "gpt-4o"
 
 client = AzureOpenAI(
     api_key=subscription_key,
@@ -20,4 +21,5 @@ def ask_llm(prompt):
             {"role": "user", "content": prompt}
         ]
     )
+
     return response.choices[0].message.content
