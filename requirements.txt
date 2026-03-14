@@ -3,6 +3,7 @@ pandas
 langchain
 langchain-community
 langchain-openai
+chromadb
 openai
 tiktoken
 python-dotenv
